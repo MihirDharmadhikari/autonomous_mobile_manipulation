@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+  <group ns="bvr_SIM">
+    <node name="test_node" pkg="mm_coverage_planner" type="planner_node" respawn="false" output="screen">
+      <param name="robot_namespace" value="$(arg robot_namespace)" />
+      <param name="arm_namespace" value="$(arg arm_namespace)" />
+      <param name="sim_suffix" value="$(arg sim_suffix)" />
+
+      <param name="allow_trajectory_execution" value="$(arg allow_trajectory_execution)"/>
+      <param name="max_safe_path_cost" value="$(arg max_safe_path_cost)"/>
+      <param name="jiggle_fraction" value="$(arg jiggle_fraction)" />
+      <param name="max_sampling_attempts" value="$(arg max_sampling_attempts)" />
+    </node>
+  </group>  
+
+</launch>

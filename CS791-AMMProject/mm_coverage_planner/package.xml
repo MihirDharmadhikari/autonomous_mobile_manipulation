@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>mm_coverage_planner</name>
+  <version>0.0.0</version>
+  <description>Mesh coverage planner for mobile manipulator</description>
+  <maintainer email="mdharmadhikar@nevada.unr.edu">Mihir Dharmadhikari</maintainer>
+  <maintainer email="houmanekrami@gmail.com">Houman Ekrami</maintainer>
+  <maintainer email="tolgakarakurt@gmail.com">Tolga Karakurt</maintainer>
+  <maintainer email="mbs@gmail.com">Md Abu Sayed</maintainer>
+  <license>None</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>tf</depend>
+  <depend>message_generation</depend>
+  <depend>geometry_msgs</depend>
+  
+  <depend>moveit_core</depend>
+  <depend>moveit_visual_tools</depend>
+  <depend>moveit_ros_planning_interface</depend>      
+</package>

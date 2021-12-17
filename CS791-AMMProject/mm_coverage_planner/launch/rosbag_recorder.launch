@@ -1,0 +1,22 @@
+<launch>
+	<node pkg="rosbag" type="record" name="recorder" output="screen" respawn="false" args="--split --size=2048
+	/bvr_SIM/move_base/NavfnROS/plan
+	/bvr_SIM/move_base/TebLocalPlannerROS/local_plan
+	/bvr_SIM/move_base/TebLocalPlannerROS/global_plan
+	/bvr_SIM/move_base/current_goal
+	/bvr_SIM/move_base/global_costmap/costmap
+	/bvr_SIM/move_base/local_costmap/costmap
+	/bvr_SIM/move_base/local_costmap/footprint
+	/bvr_SIM/odom
+	/tf
+	/tf_static
+	/rviz_visual_tools
+	/bvr_SIM/octomap_point_cloud_centers
+	/bvr_SIM/tg_base_locations
+	/bvr_SIM/viewpoint_vis
+	/bvr_SIM/all_base_locations
+	/samples
+	/bvr_SIM/occ_pts
+	"
+	/>
+</launch>

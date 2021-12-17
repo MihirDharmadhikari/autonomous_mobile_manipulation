@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+
+  <param name="use_sim_time" value="true"/>
+
+	<arg name="robot_namespace" default="bvr_SIM"/>
+	<arg name="arm_namespace" default="main_arm_SIM"/> 
+	<arg name="sim_suffix" default="_SIM"/>
+
+	<!-- move_group settings -->
+	<arg name="allow_trajectory_execution" default="true"/>
+	<arg name="max_safe_path_cost" default="5"/>
+	<arg name="jiggle_fraction" default="0.05"/>
+	<arg name="max_sampling_attempts" default="100"/>
+	<arg name="publish_monitored_planning_scene" default="true"/>
+
+  <group ns="bvr_SIM">
+    <node name="planner_node" pkg="mm_coverage_planner" type="planner_node" respawn="false" output="screen">
+      <param name="robot_namespace" value="$(arg robot_namespace)" />
+      <param name="arm_namespace" value="$(arg arm_namespace)" />
+      <param name="sim_suffix" value="$(arg sim_suffix)" />
+
+      <param name="allow_trajectory_execution" value="$(arg allow_trajectory_execution)"/>
+      <param name="max_safe_path_cost" value="$(arg max_safe_path_cost)"/>
+      <param name="jiggle_fraction" value="$(arg jiggle_fraction)" />
+      <param name="max_sampling_attempts" value="$(arg max_sampling_attempts)" />
+    </node>
+  </group>  
+
+</launch>
